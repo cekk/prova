@@ -1,0 +1,8 @@
+{
+  "latta": {"immagine": "immagini/lattina.jpg",
+            "tasto": 37},
+  "vetro": {"immagine": "immagini/vetro.jpg",
+            "tasto": 40},
+  "plastica": {"immagine": "immagini/plastica.jpg",
+            "tasto": 39}
+}
