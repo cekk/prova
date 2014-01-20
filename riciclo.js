@@ -8,20 +8,31 @@ $(document).ready(function() {
                 $(".jumbotron img").attr({"src": random_item.immagine,
                                           "alt": rand_key});
                 callback(random_item);
-        });    
+        });
     }
-    estrai(function(callback) {  
+    estrai(function(callback) {
         current_item = callback;
     });
     $('html').keydown(function(e){
         if (e.which == current_item.tasto) {
-            alert("BRAVO!");
-            estrai(function(callback) {  
-                current_item = callback;
-            });
+            $(".jumbotron").before('<div class="alert alert-success">Bravo!</div>');
+            $('.jumbotron').addClass("alert alert-success");
+            setTimeout(function() {
+                $('.jumbotron').removeClass("alert alert-success");
+                $('.alert').remove();
+                estrai(function(callback) {
+                    current_item = callback;
+                });
+            },1000);
+
         }
         else {
-            alert("SBAGLIATO!");
+            $(".jumbotron").before('<div class="alert alert-danger">Sbagliato!</div>');
+            $('.jumbotron').addClass("alert alert-danger");
+            setTimeout(function() {
+                $('.jumbotron').removeClass("alert alert-danger");
+                $('.alert').remove();
+            },1000);
         }
     });
 });
