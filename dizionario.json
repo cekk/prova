@@ -1,8 +1,5 @@
 {
-  "latta": {"immagine": "immagini/lattina.jpg",
-            "tasto": 65},
-  "vetro": {"immagine": "immagini/vetro.jpg",
-            "tasto": 83},
-  "plastica": {"immagine": "immagini/plastica.jpg",
-            "tasto": 68}
+  "carta": {"tasto": 37},
+  "vetro": {"tasto": 40},
+  "plastica": {"tasto": 39}
 }
